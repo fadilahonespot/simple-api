@@ -43,7 +43,7 @@ Before you start, make sure you have the following:
     DB_DEBUG=false
     DB_MIGRATION=false
     ```
-    Replace the placeholder values (your_database_name, your_database_user, your_database_password) with your actual database information. For the first time running the application, the `DB_MIGRATION` config can be set to `true`. If you want to see the query log to the database, you can set `DB_DEBUG` to `true`.
+    Replace the placeholder values (your_database_name, your_database_user, your_database_password) with your actual database information. For the first time running the application, the `DB_MIGRATION` config can be set to `true`. If you want to see the query logs console apps to the database, you can set `DB_DEBUG` to `true`.
 
 4. Logger Configuration:
 
