@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "e5eb8d1d-9b14-470a-b64a-6f642c8e23e7",
+		"name": "Simple Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10350858"
+	},
+	"item": [
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Mie Sedap rasa soto\",\n    \"description\": \"Taburan ayam gurih nikmat di setiap kemasan\",\n    \"rating\": 9.0,\n    \"image\": \"http://google.com/image.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7690/products",
+					"host": [
+						"localhost"
+					],
+					"port": "7690",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Mie indomi Rasa ayam Bawang\",\n    \"description\": \"Taburan ayam gurih nikmat di setiap kemasan\",\n    \"rating\": 8.1,\n    \"image\": \"http://google.com/image.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7690/products",
+							"host": [
+								"localhost"
+							],
+							"port": "7690",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Dec 2023 17:00:59 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Get List Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7690/products?page=1&limit=10",
+					"host": [
+						"localhost"
+					],
+					"port": "7690",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "sedap",
+							"disabled": true
+						},
+						{
+							"key": "rating",
+							"value": "8.0",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:7690/products",
+							"host": [
+								"localhost"
+							],
+							"port": "7690",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Dec 2023 17:08:38 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "493"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": \"22c8e385-6d60-4ddb-87b2-3fb543d43177\",\n            \"title\": \"Mie indomi Rasa ayam Soto\",\n            \"description\": \"Taburan ayam gurih nikmat di setiap kemasan\",\n            \"rating\": 8.1,\n            \"image\": \"http://google.com/image.jpg\"\n        },\n        {\n            \"id\": \"a1b91cb9-c4a5-408f-ad28-5f32e197d954\",\n            \"title\": \"Mie indomi Rasa ayam Bawang\",\n            \"description\": \"Taburan ayam gurih nikmat di setiap kemasan\",\n            \"rating\": 8.1,\n            \"image\": \"http://google.com/image.jpg\"\n        }\n    ],\n    \"pagination\": {\n        \"page\": 1,\n        \"limit\": 10,\n        \"totalData\": 2,\n        \"totalPage\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Product Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7690/products/22c8e385-6d60-4ddb-87b2-3fb543d43177",
+					"host": [
+						"localhost"
+					],
+					"port": "7690",
+					"path": [
+						"products",
+						"22c8e385-6d60-4ddb-87b2-3fb543d43177"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:7690/products/22c8e385-6d60-4ddb-87b2-3fb543d43177",
+							"host": [
+								"localhost"
+							],
+							"port": "7690",
+							"path": [
+								"products",
+								"22c8e385-6d60-4ddb-87b2-3fb543d43177"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Dec 2023 17:21:23 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "338"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"22c8e385-6d60-4ddb-87b2-3fb543d43177\",\n        \"title\": \"Mie indomi Rasa ayam Soto\",\n        \"description\": \"Taburan ayam gurih nikmat di setiap kemasan\",\n        \"rating\": 8.1,\n        \"image\": \"http://google.com/image.jpg\",\n        \"createdAt\": \"2023-12-20T00:00:49.591+07:00\",\n        \"updatedAt\": \"2023-12-20T00:00:49.591+07:00\",\n        \"deletedAt\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Mie Sedap rasa soto lamongan\",\n    \"description\": \"Taburan ayam gurih nikmat di setiap kemasan\",\n    \"rating\": 9.1,\n    \"image\": \"http://google.com/image.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7690/products/b34e8eac-ac43-4163-b9ad-49f15644b4fa",
+					"host": [
+						"localhost"
+					],
+					"port": "7690",
+					"path": [
+						"products",
+						"b34e8eac-ac43-4163-b9ad-49f15644b4fa"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Mie Sedap rasa soto lamongan\",\n    \"description\": \"Taburan ayam gurih nikmat di setiap kemasan\",\n    \"rating\": 9.1,\n    \"image\": \"http://google.com/image.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7690/products/b34e8eac-ac43-4163-b9ad-49f15644b4fa",
+							"host": [
+								"localhost"
+							],
+							"port": "7690",
+							"path": [
+								"products",
+								"b34e8eac-ac43-4163-b9ad-49f15644b4fa"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Dec 2023 23:25:20 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:7690/products/22c8e385-6d60-4ddb-87b2-3fb543d43177",
+					"host": [
+						"localhost"
+					],
+					"port": "7690",
+					"path": [
+						"products",
+						"22c8e385-6d60-4ddb-87b2-3fb543d43177"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:7690/products/22c8e385-6d60-4ddb-87b2-3fb543d43177",
+							"host": [
+								"localhost"
+							],
+							"port": "7690",
+							"path": [
+								"products",
+								"22c8e385-6d60-4ddb-87b2-3fb543d43177"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Dec 2023 23:26:53 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": null\n}"
+				}
+			]
+		}
+	]
+}
