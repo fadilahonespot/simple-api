@@ -9,7 +9,7 @@ This document provides instructions on how to set up your database configuration
 Before you start, make sure you have the following:
 
 - [ ] Docker installed on your machine.
-- [ ] A running instance of your database (e.g., MySQL, PostgreSQL, SQLite).
+- [ ] A running instance of your database (MySQL).
 - [ ] Database credentials (username, password, host, port).
 - [ ] A copy of the `.env.example` file.
 
