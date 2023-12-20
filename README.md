@@ -33,16 +33,17 @@ Before you start, make sure you have the following:
 3. Update the Database Configuration:
 
     Locate the database configuration section in the .env file. Update it to match your provided database information:
+    
     ```
     DB_HOST=your_database_host
     DB_PORT=your_database_port
     DB_DATABASE=your_database_name
     DB_USERNAME=your_database_username
     DB_PASSWORD=your_database_password
-    DB_DEBUG=true
+    DB_DEBUG=false
     DB_MIGRATION=false
     ```
-    Replace the placeholder values (your_database_name, your_database_user, your_database_password) with your actual database information. Additionally, set DB_DEBUG to true and DB_MIGRATION to false. For the first time running the application, the DB_MIGRATION config can be set to true
+    Replace the placeholder values (your_database_name, your_database_user, your_database_password) with your actual database information. For the first time running the application, the `DB_MIGRATION` config can be set to `true`. If you want to see the query log to the database, you can set `DB_DEBUG` to `true`.
 
 4. Logger Configuration:
 
