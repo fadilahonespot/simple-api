@@ -91,13 +91,6 @@ Before you start, make sure you have the following:
 
 This documentation outlines the usage of the Simple API, providing details on various endpoints and their functionalities.
 
-## Collection Information
-
-- **Name:** Simple API
-- **Postman ID:** e5eb8d1d-9b14-470a-b64a-6f642c8e23e7
-- **Schema:** [Postman v2.1.0 Collection Schema](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- **Exporter ID:** 10350858
-
 ## Endpoints
 
 ### 1. Add Product
