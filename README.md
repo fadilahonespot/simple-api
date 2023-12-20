@@ -55,22 +55,27 @@ Before you start, make sure you have the following:
     ```
     Adjust the LOGGER_FOLDER_PATH based on your preferred folder structure.
 
-5. Save and Close the File:
+5. Ensure that the application is configured with the following environment variable:
+    ```
+    APP_PORT=7690
+    ```
+
+6. Save and Close the File:
 
     Save the changes and close the .env file.
 
-6. Verify the Configuration:
+7. Verify the Configuration:
 
     Make sure your application can connect to the database using the updated configuration. You can do this by running a database-related task or checking your application logs.
 
-7. Run Unit Testing:
+8. Run Unit Testing:
 
     Execute the following command to run unit tests and generate a coverage report:
 
     ```
     make test-coverage
     ```
-8. Build and Run in Docker:
+9. Build and Run in Docker:
 
     Use the following command to build and run your application in Docker:
 
@@ -79,13 +84,14 @@ Before you start, make sure you have the following:
     ```
     This assumes you have installed the Makefile program on your computer or server.
 
-9. Export Postman Collection:
+10. Export Postman Collection:
 
     Use Postman to export the provided collection file (Simple Api.postman_collection.json) to your local machine.
 
-10. Start or Restart Your Application:
+11. Start or Restart Your Application:
 
     If your application was already running, you may need to restart it to apply the new database configuration.
+
 
 
 # API Documentation
@@ -211,5 +217,3 @@ This documentation outlines the usage of the Simple API, providing details on va
         "data": null
     }
     ```
-
-
