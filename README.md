@@ -76,7 +76,7 @@ Before you start, make sure you have the following:
     ```
     make build
     ```
-    This assumes you have a Makefile with a target named build that contains the necessary Docker commands.
+    This assumes you have installed the Makefile program on your computer or server.
 
 9. Export Postman Collection:
 
