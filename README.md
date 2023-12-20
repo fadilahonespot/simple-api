@@ -86,3 +86,136 @@ Before you start, make sure you have the following:
 
     If your application was already running, you may need to restart it to apply the new database configuration.
 
+
+# API Documentation
+
+This documentation outlines the usage of the Simple API, providing details on various endpoints and their functionalities.
+
+## Collection Information
+
+- **Name:** Simple API
+- **Postman ID:** e5eb8d1d-9b14-470a-b64a-6f642c8e23e7
+- **Schema:** [Postman v2.1.0 Collection Schema](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- **Exporter ID:** 10350858
+
+## Endpoints
+
+### 1. Add Product
+
+- **Method:** POST
+- **Endpoint:** `localhost:7690/products`
+- **Request Body:**
+    ```json
+    {
+        "title": "Mie Sedap rasa soto",
+        "description": "Taburan ayam gurih nikmat di setiap kemasan",
+        "rating": 9.0,
+        "image": "http://google.com/image.jpg"
+    }
+    ```
+- **Response:**
+    ```json
+    {
+        "code": 200,
+        "message": "Success",
+        "data": null
+    }
+    ```
+
+### 2. Get List Product
+
+- **Method:** GET
+- **Endpoint:** `localhost:7690/products?page=1&limit=10`
+- **Query Parameters:**
+    - `title` (disabled)
+    - `rating` (disabled)
+    - `page`: 1
+    - `limit`: 10
+- **Response:**
+    ```json
+    {
+        "code": 200,
+        "message": "Success",
+        "data": [
+            {
+                "id": "22c8e385-6d60-4ddb-87b2-3fb543d43177",
+                "title": "Mie indomi Rasa ayam Soto",
+                "description": "Taburan ayam gurih nikmat di setiap kemasan",
+                "rating": 8.1,
+                "image": "http://google.com/image.jpg"
+            },
+            {
+                "id": "a1b91cb9-c4a5-408f-ad28-5f32e197d954",
+                "title": "Mie indomi Rasa ayam Bawang",
+                "description": "Taburan ayam gurih nikmat di setiap kemasan",
+                "rating": 8.1,
+                "image": "http://google.com/image.jpg"
+            }
+        ],
+        "pagination": {
+            "page": 1,
+            "limit": 10,
+            "totalData": 2,
+            "totalPage": 1
+        }
+    }
+    ```
+
+### 3. Get Product Detail
+
+- **Method:** GET
+- **Endpoint:** `localhost:7690/products/22c8e385-6d60-4ddb-87b2-3fb543d43177`
+- **Response:**
+    ```json
+    {
+        "code": 200,
+        "message": "Success",
+        "data": {
+            "id": "22c8e385-6d60-4ddb-87b2-3fb543d43177",
+            "title": "Mie indomi Rasa ayam Soto",
+            "description": "Taburan ayam gurih nikmat di setiap kemasan",
+            "rating": 8.1,
+            "image": "http://google.com/image.jpg",
+            "createdAt": "2023-12-20T00:00:49.591+07:00",
+            "updatedAt": "2023-12-20T00:00:49.591+07:00",
+            "deletedAt": null
+        }
+    }
+    ```
+
+### 4. Update Product
+
+- **Method:** PUT
+- **Endpoint:** `localhost:7690/products/b34e8eac-ac43-4163-b9ad-49f15644b4fa`
+- **Request Body:**
+    ```json
+    {
+        "title": "Mie Sedap rasa soto lamongan",
+        "description": "Taburan ayam gurih nikmat di setiap kemasan",
+        "rating": 9.1,
+        "image": "http://google.com/image.jpg"
+    }
+    ```
+- **Response:**
+    ```json
+    {
+        "code": 200,
+        "message": "Success",
+        "data": null
+    }
+    ```
+
+### 5. Delete Product
+
+- **Method:** DELETE
+- **Endpoint:** `localhost:7690/products/22c8e385-6d60-4ddb-87b2-3fb543d43177`
+- **Response:**
+    ```json
+    {
+        "code": 200,
+        "message": "Success",
+        "data": null
+    }
+    ```
+
+
