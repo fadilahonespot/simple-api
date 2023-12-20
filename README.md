@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides instructions on how to set up your database configuration for the [Your Project Name] project using a `.env` file.
+This document provides instructions on how to set up your database configuration for the simple API app project using a `.env` file.
 
 ## Prerequisites
 
